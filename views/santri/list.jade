@@ -1,0 +1,29 @@
+extends ../layout.jade
+block content
+    h4 List Santri
+    a(href="/santri/create")
+        button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent
+            | Tambah Santri
+    .mdl-grid.portfolio-max-width
+        each santri in data_santri
+            .mdl(style={color: 'red', background: 'green'}).mdl-cell.mdl-card.mdl-shadow--4dp.portfolio-card
+                .mdl(style={color: 'red', background: 'green'}).mdl-cell.mdl-card.mdl-shadow--4dp.portfolio-card
+                    img.article-image(src='#{santri.foto}', border='0', alt='')
+                .mdl-card__title
+                    h2.mdl-card__title-text #{santri.nama}
+                .mdl-card__supporting-text
+                    p.mdl-card__title-text #{santri.asal}
+                .mdl-card__actions.mdl-card--border
+                    a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect.mdl-button--accent(href='/santri/detail/#{santri.id}', data-upgraded=',MaterialButton,MaterialRipple')
+                        | Lihat Profil
+                        span.mdl-button__ripple-container
+                            span.mdl-ripple
+                .mdl-card__actions.mdl-card--border
+                    a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect.mdl-button--accent(href='/santri/update/#{santri.id}', data-upgraded=',MaterialButton,MaterialRipple')
+                        | Edit
+                .mdl-card__actions.mdl-card--border
+                    a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect.mdl-button--accent(href='/santri/delete/#{santri.id}', data-upgraded=',MaterialButton,MaterialRipple')
+                        | Delete
+                .mdl-card__actions.mdl-card--border
+                    a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect.mdl-button--accent(href='/santri/upload/#{santri.id}', data-upgraded=',MaterialButton,MaterialRipple')
+                        | Upload Foto

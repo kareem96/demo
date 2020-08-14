@@ -1,0 +1,15 @@
+extends ./layout.jade
+block content
+    p #{message}
+    form(method="POST",action="/auth" align='center')
+        h3 Login
+        input(type="text", name="email")
+        |  Username
+        br
+        br
+        input(type="password", name="password")
+        |  Password
+        br
+        br
+        button(type="submit")
+            | login

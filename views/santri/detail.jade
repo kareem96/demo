@@ -1,0 +1,12 @@
+extends ../layout.jade
+block content
+    h4 #{santri.nama}
+    .mdl-cell.mdl-card.mdl-shadow--4dp.portfolio-card
+        .mdl-card__media
+            img.article-image(src='/#{santri.foto}', border='0', alt='')
+        .mdl-card__title
+            h2.mdl-card__title-text #{santri.nama}
+        .mdl-card__supporting-text
+            p.mdl-card__title-text #{santri.hp}
+            p.mdl-card__title-text #{santri.asal}
+              

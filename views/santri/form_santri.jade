@@ -1,0 +1,23 @@
+extends ../layout.jade
+block content
+    h4(align='center') Tambahkan Santri
+    form(method='POST',action='/santri/create',align='center')
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#nama.mdl-textfield__input(type='text',name='nama')
+            label.mdl-textfield__label(for='nama') Nama Santri
+        br
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#hp.mdl-textfield__input(type='text',name='hp')
+            label.mdl-textfield__label(for='hp') No. Hp
+        br
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#asal.mdl-textfield__input(type='text',name='asal')
+            label.mdl-textfield__label(for='asal') Asal
+        br
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#foto.mdl-textfield__input(type='text',name='foto')
+            label.mdl-textfield__label(for='foto') Foto
+        br
+        button.mdl-button.mdl-button--raised.mdl-button--accent(type='submit')
+            | Tambah
+        
